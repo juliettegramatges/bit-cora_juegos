@@ -45,3 +45,8 @@ get '/bitacora/:tipo' do
   @items = cargar_desde_excel(@tipo)
   erb :bitacora
 end
+
+
+get '/reflexion' do
+  erb :reflexion
+end
