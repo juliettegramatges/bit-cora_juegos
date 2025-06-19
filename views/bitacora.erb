@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bitácora - <%= @tipo.capitalize %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<h2><%= @tipo.capitalize %></h2>
+
+<% @items.each do |item| %>
+  <div class="card">
+    <h3><%= item[:nombre] %></h3>
+    
+    <% if item[:descripcion] %>
+      <p><strong>Descripción:</strong> <%= item[:descripcion] %></p>
+    <% end %>
+    
+    <% if item[:esquema] %>
+      <p><strong>Esquema:</strong> <%= item[:esquema] %></p>
+    <% end %>
+    
+    <% if item[:objetivo] %>
+      <p><strong>Objetivo:</strong> <%= item[:objetivo] %></p>
+    <% end %>
+  </div>
+<% end %>
+
+<a href="/">⬅ Volver al inicio</a>
+
+</body>
+</html>
