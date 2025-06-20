@@ -2,7 +2,6 @@ require 'sinatra'
 require 'roo'
 
 set :public_folder, 'public'
-set :port, ENV['PORT'] || 4567
 
 def cargar_desde_excel(tipo)
   ruta = "./data/#{tipo}.xlsx"
@@ -52,5 +51,3 @@ end
 get '/reflexion' do
   erb :reflexion
 end
-
-Sinatra::Application.run! if __FILE__ == $0
