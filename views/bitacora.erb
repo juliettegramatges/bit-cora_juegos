@@ -6,28 +6,43 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-<h2><%= @tipo.capitalize %></h2>
+<main>
+<% if @tipo == 'dinamicas' %>
+  <h2>Dinámicas</h2>
+<% else %>
+  <h2><%= @tipo.capitalize %></h2>
+<% end %>
 
 <% @items.each do |item| %>
   <div class="card">
+
     <h3><%= item[:nombre] %></h3>
     
     <% if item[:descripcion] %>
       <p><strong>Descripción:</strong> <%= item[:descripcion] %></p>
     <% end %>
     
-    <% if item[:esquema] %>
-      <p><strong>Esquema:</strong> <%= item[:esquema] %></p>
-    <% end %>
-    
     <% if item[:objetivo] %>
       <p><strong>Objetivo:</strong> <%= item[:objetivo] %></p>
+    <% end %>
+
+    <% if item[:link_video] && item[:link_video] != 'No disponible.' %>
+      <p><strong>Link de demostración:</strong>
+        <a href="<%= item[:link_video] %>" target="_blank" rel="noopener noreferrer">
+          Ver video
+        </a>
+      </p>
+    <% end %>
+
+    <% if item[:imagen] %>
+      <div class="imagen-centrada">
+        <img src="<%= item[:imagen] %>" alt="<%= item[:nombre] %>">
+      </div>
     <% end %>
   </div>
 <% end %>
 
-<a href="/">⬅ Volver al inicio</a>
-
+<a href="/" class="back-link">⬅ Volver al inicio</a>
+</main>
 </body>
 </html>

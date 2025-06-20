@@ -13,7 +13,7 @@ def cargar_desde_excel(tipo)
       {
         nombre: row[0],
         descripcion: row[1],
-        esquema: row[2]
+        link_video: row[2]
       }
     end
   when "dinamicas"
@@ -21,7 +21,7 @@ def cargar_desde_excel(tipo)
       {
         nombre: row[0],
         descripcion: row[1],
-        esquema: row[2],
+        link_video: row[2],
         imagen: row[3]
       }
     end
