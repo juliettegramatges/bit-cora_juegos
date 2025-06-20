@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.3.0)
+    csv (3.3.5)
     logger (1.7.0)
     mini_portile2 (2.8.9)
     mustermann (3.0.3)
@@ -39,6 +40,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  csv
   rack
   roo
   sinatra
