@@ -7,11 +7,14 @@ GEM
     mini_portile2 (2.8.9)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.7.4)
     nokogiri (1.18.8)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     nokogiri (1.18.8-x86_64-darwin)
       racc (~> 1.4)
+    puma (6.6.0)
+      nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.16)
     rack-protection (4.1.1)
@@ -41,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   csv
+  puma
   rack
   roo
   sinatra
